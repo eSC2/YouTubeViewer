@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:YouTubeViewers.WPF" xmlns:views="clr-namespace:YouTubeViewers.WPF.Views"
         mc:Ignorable="d"
         Title="YouTube Viewers" Height="450" Width="800">
-    <Grid Margin="25">
-        <views:YouTubeViewersView/>
-    </Grid>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <StackPanel Margin="25">
+            <!--<views:YouTubeViewersView/>-->
+            <views:AddYouTubeViewerView/>
+            <views:EditYouTubeViewerView/>
+        </StackPanel>
+    </ScrollViewer>
 </Window>
