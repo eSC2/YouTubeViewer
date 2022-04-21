@@ -9,7 +9,7 @@ namespace YouTubeViewers.WPF.ViewModels
 {
     internal class YouTubeViewerDetailsFormViewModel : ViewModelBase
     {
-        private string _username;
+        private string? _username;
 
         public string Username
         {
