@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YouTubeViewers.WPF.Models
+namespace YouTubeViewers.Domain.Models
 {
-    internal class YouTubeViewer
+    public class YouTubeViewer
     {
         public Guid Id { get; }
         public string Username { get; }
