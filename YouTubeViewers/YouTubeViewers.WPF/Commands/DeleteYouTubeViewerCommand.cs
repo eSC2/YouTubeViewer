@@ -22,6 +22,8 @@ namespace YouTubeViewers.WPF.Commands
 
         public override async Task ExecuteAsync(object? parameter)
         {
+            _youTubeViewersListingItemViewModel.IsDeleting = true;
+
             YouTubeViewer youTubeViewer = _youTubeViewersListingItemViewModel.YouTubeViewer;
 
             try
@@ -31,6 +33,10 @@ namespace YouTubeViewers.WPF.Commands
             catch (Exception)
             {
                 throw;
+            }
+            finally
+            {
+                _youTubeViewersListingItemViewModel.IsDeleting = false;
             }
         }
     }
