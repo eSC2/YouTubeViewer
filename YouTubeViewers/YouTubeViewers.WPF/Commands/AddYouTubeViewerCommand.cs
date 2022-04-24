@@ -28,6 +28,8 @@ namespace YouTubeViewers.WPF.Commands
 
             YouTubeViewer youTubeViewer = new YouTubeViewer(Guid.NewGuid(), formViewModel.Username, formViewModel.IsSubscribed, formViewModel.IsMember);
 
+            formViewModel.IsSubmitting = true;
+
             try
             {
                 await _youTubeViewersStore.Add(youTubeViewer);
@@ -37,6 +39,10 @@ namespace YouTubeViewers.WPF.Commands
             catch (Exception)
             {
                 throw;
+            }
+            finally
+            {
+                formViewModel.IsSubmitting = false;
             }
         }
     }
