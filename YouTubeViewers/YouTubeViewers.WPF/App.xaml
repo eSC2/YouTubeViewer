@@ -7,7 +7,12 @@
             <SolidColorBrush x:Key="BorderPrimary" Color="#1C1C1C"/>
 
             <Style TargetType="TextBlock" x:Key="PageHeader">
+                <Setter Property="VerticalAlignment" Value="Center" />
                 <Setter Property="FontSize" Value="32"/>
+            </Style>
+
+            <Style TargetType="TextBlock" x:Key="ErrorMessage">
+                <Setter Property="Foreground" Value="Red"/>
             </Style>
 
             <Style TargetType="Button">

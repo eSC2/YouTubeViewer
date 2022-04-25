@@ -7,15 +7,19 @@
              xmlns:custom="clr-namespace:LoadingSpinnerControl;assembly=LoadingSpinnerControl"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </UserControl.Resources>
     <Grid>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.IsSharedSizeScope="True">
-            
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
@@ -58,5 +62,8 @@
             <Button Content="Cancel" Command="{Binding CancelCommand}" Margin="0 0 5 0" Style="{StaticResource ButtonSecondary}"/>
             <custom:LoadingSpinner IsLoading="{Binding IsSubmitting}" Diameter="25" Thickness="2" />
         </WrapPanel>
+
+        <TextBlock Grid.Row="2" Margin="0 15 0 0" Text="{Binding ErrorMessage}" Style="{StaticResource ErrorMessage}" 
+                   Visibility="{Binding HasErrorMessage, Converter={StaticResource BooleanToVisibilityConverter}}" />
     </Grid>
 </UserControl>

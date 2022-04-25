@@ -28,6 +28,7 @@ namespace YouTubeViewers.WPF.Commands
 
             YouTubeViewer youTubeViewer = new YouTubeViewer(_editYouTubeViewerViewModel.YouTubeViewerId, formViewModel.Username, formViewModel.IsSubscribed, formViewModel.IsMember);
 
+            formViewModel.ErrorMessage = null;
             formViewModel.IsSubmitting = true;
 
             try
@@ -38,7 +39,7 @@ namespace YouTubeViewers.WPF.Commands
             }
             catch (Exception)
             {
-                throw;
+                formViewModel.ErrorMessage = "Failed to update YouTube viewer. Please try again later.";
             }
             finally
             {
