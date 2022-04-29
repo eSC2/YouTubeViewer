@@ -9,6 +9,12 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.vs
+bin
+obj
+YouTubeViewersDesignTimeDbContextFactory.cs
+appsettings.json
+
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
