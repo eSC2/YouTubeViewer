@@ -12,8 +12,8 @@
 *.vs
 bin
 obj
-YouTubeViewersDesignTimeDbContextFactory
-appsettings
+YouTubeViewersDesignTimeDbContextFactory.cs
+appsettings.json
 
 
 # User-specific files (MonoDevelop/Xamarin Studio)
